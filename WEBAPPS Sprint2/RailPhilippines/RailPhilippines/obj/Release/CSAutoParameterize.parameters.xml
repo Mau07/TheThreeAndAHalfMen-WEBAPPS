@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="SQLAzureConnection-Web.config Connection String" description="SQLAzureConnection Connection String used in web.config by the application to access the database." defaultValue="Data Source=v207tnta5x.database.windows.net,1433;&#xD;&#xA;Initial Catalog=RailPhilippines;User ID=RailPhilippines;Password=@RailPhil14#;Encrypt=true;Trusted_Connection=False" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\DJ\\Source\\Workspaces\\Workspace\\RailPhilippines\\RailPhilippines\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='SQLAzureConnection']/@connectionString" />
+  </parameter>
+</parameters>

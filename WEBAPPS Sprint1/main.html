@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>RailPhilippines - Main</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Icons -->
+    <link rel='stylesheet' href='fonts/typicons/typicons.min.css' />
+    <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
+
+    <!-- Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Oleo+Script+Swash+Caps:400,700' rel='stylesheet' type='text/css'>
+
+    <!-- Loading Bootstrap -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Loading Flat UI -->
+    <link href="css/flat-ui.css" rel="stylesheet">
+    <link href="css/elastislide.css" rel="stylesheet">
+    <link href="css/main-custom.css" rel="stylesheet">
+
+    <script src="js/modernizr.custom.17475.js"></script>
+
+    <link rel="shortcut icon" href="images/favicon.ico">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse navbar-embossed navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" data-toggle="collapse" data-target="#mainNavbar" class="navbar-toggle">
+                    <span class="sr-only">Toggle Navigation</span>
+                </button>
+                <a href="#" class="navbar-brand">RailPhilippines</a>
+            </div>
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a>
+                            <span class="fui-user"></span>Vhong Navarro</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="settings"><b class="fui-gear"></b> Settings</a>
+                        <span class="dropdown-arrow"></span>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="#">
+                                    <span class="fui-user"></span> Account Settings</a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="fui-new"></span> Contact Us</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="index.html">
+                                    <span class="fui-power"></span> Sign Out</a>
+                            </li>
+                        </ul>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div id="main">
+                    <div class="main-content">
+                        <div class="tabbable">
+                            <div class="main-tabs">
+                                <ul class="nav nav-pills nav-justified">
+                                    <li class="active">
+                                        <a href="#northbound" data-toggle="tab">North Bound</a>
+                                    </li>
+                                    <li>
+                                        <a href="#southbound" data-toggle="tab">South Bound</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- / tabs -->
+                            <div class="tab-content">
+                                <div class="tab-pane fade in active" id="northbound">
+                                    <div class="panel-group" id="accordion-north">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading" data-toggle="collapse" data-parent="#accordion-north" href="#collapseTaftAve">
+                                                        <h6 class="panel-title"><span class="typcn typcn-media-stop"></span> Taft Avenue</h6>
+                                                    </div>
+                                                    <div id="collapseTaftAve" class="panel-collapse collapse">
+                                                        <div class="panel-body">
+                                                            <div class="row">
+                                                                <div class="col-md-12">
+                                                                    <button class="btn btn-block btn-warning"><strong>Stairs</strong> : 15 mins</button>
+                                                                </div>
+                                                                <div class="col-md-12">
+                                                                    <button class="btn btn-block btn-danger"><strong>Ticketing</strong> : 10 mins</button>
+                                                                </div>
+                                                                <div class="col-md-12">
+                                                                    <button class="btn btn-block btn-success"><strong>Platform</strong> : 5 mins</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div> <!-- taft ave panel -->      
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading" data-toggle="collapse" data-parent="#accordion-north" href="#collapseMagallanes">
+                                                        <h6 class="panel-title"><span class="typcn typcn-media-stop"></span> Magallanes</h6>
+                                                    </div>
+                                                    <div id="collapseMagallanes" class="panel-collapse collapse">
+                                                        <div class="panel-body">
+                                                            <div class="row">
+                                                                <div class="col-md-12">
+                                                                    <button class="btn btn-block btn-warning"><strong>Stairs</strong> : 15 mins</button>
+                                                                </div>
+                                                                <div class="col-md-12">
+                                                                    <button class="btn btn-block btn-danger"><strong>Ticketing</strong> : 10 mins</button>
+                                                                </div>
+                                                                <div class="col-md-12">
+                                                                    <button class="btn btn-block btn-success"><strong>Platform</strong> : 5 mins</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div> <!-- magallanes panel -->
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading" data-toggle="collapse" data-parent="#accordion-north" href="#collapseAyala">
+                                                        <h6 class="panel-title"><span class="typcn typcn-media-stop"></span> Ayala</h6>
+                                                    </div>
+                                                    <div id="collapseAyala" class="panel-collapse collapse">
+                                                        <div class="panel-body">
+                                                            <div class="row">
+                                                                <div class="col-md-12">
+                                                                    <button class="btn btn-block btn-warning"><strong>Stairs</strong> : 15 mins</button>
+                                                                </div>
+                                                                <div class="col-md-12">
+                                                                    <button class="btn btn-block btn-danger"><strong>Ticketing</strong> : 10 mins</button>
+                                                                </div>
+                                                                <div class="col-md-12">
+                                                                    <button class="btn btn-block btn-success"><strong>Platform</strong> : 5 mins</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div> <!-- ayala panel -->
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading" data-toggle="collapse" data-parent="#accordion-north" href="#collapseBuendia">
+                                                        <h6 class="panel-title"><span class="typcn typcn-media-stop"></span> Buendia</h6>
+                                                    </div>
+                                                    <div id="collapseBuendia" class="panel-collapse collapse">
+                                                        <div class="panel-body">
+                                                            <div class="row">
+                                                                <div class="col-md-12">
+                                                                    <button class="btn btn-block btn-warning"><strong>Stairs</strong> : 15 mins</button>
+                                                                </div>
+                                                                <div class="col-md-12">
+                                                                    <button class="btn btn-block btn-danger"><strong>Ticketing</strong> : 10 mins</button>
+                                                                </div>
+                                                                <div class="col-md-12">
+                                                                    <button class="btn btn-block btn-success"><strong>Platform</strong> : 5 mins</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div> <!-- buendia panel -->
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading" data-toggle="collapse" data-parent="#accordion-north" href="#collapseGuadalupe">
+                                                        <h6 class="panel-title"><span class="typcn typcn-media-stop"></span> Guadalupe</h6>
+                                                    </div>
+                                                    <div id="collapseGuadalupe" class="panel-collapse collapse">
+                                                        <div class="panel-body">
+                                                            <div class="row">
+                                                                <div class="col-md-12">
+                                                                    <button class="btn btn-block btn-warning"><strong>Stairs</strong> : 15 mins</button>
+                                                                </div>
+                                                                <div class="col-md-12">
+                                                                    <button class="btn btn-block btn-danger"><strong>Ticketing</strong> : 10 mins</button>
+                                                                </div>
+                                                                <div class="col-md-12">
+                                                                    <button class="btn btn-block btn-success"><strong>Platform</strong> : 5 mins</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div> <!-- guadalupe panel -->
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading" data-toggle="collapse" data-parent="#accordion-north" href="#collapseBoni">
+                                                        <h6 class="panel-title"><span class="typcn typcn-media-stop"></span> Boni Avenue</h6>
+                                                    </div>
+                                                    <div id="collapseBoni" class="panel-collapse collapse">
+                                                        <div class="panel-body">
+                                                            <div class="row">
+                                                                <div class="col-md-12">
+                                                                    <button class="btn btn-block btn-warning"><strong>Stairs</strong> : 15 mins</button>
+                                                                </div>
+                                                                <div class="col-md-12">
+                                                                    <button class="btn btn-block btn-danger"><strong>Ticketing</strong> : 10 mins</button>
+                                                                </div>
+                                                                <div class="col-md-12">
+                                                                    <button class="btn btn-block btn-success"><strong>Platform</strong> : 5 mins</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div> <!-- boni panel -->
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading" data-toggle="collapse" data-parent="#accordion-north" href="#collapseShaw">
+                                                        <h6 class="panel-title"><span class="typcn typcn-media-stop"></span> Shaw Boulevard</h6>
+                                                    </div>
+                                                    <div id="collapseShaw" class="panel-collapse collapse">
+                                                        <div class="panel-body">
+                                                            <div class="row">
+                                                                <div class="col-md-12">
+                                                                    <button class="btn btn-block btn-warning"><strong>Stairs</strong> : 15 mins</button>
+                                                                </div>
+                                                                <div class="col-md-12">
+                                                                    <button class="btn btn-block btn-danger"><strong>Ticketing</strong> : 10 mins</button>
+                                                                </div>
+                                                                <div class="col-md-12">
+                                                                    <button class="btn btn-block btn-success"><strong>Platform</strong> : 5 mins</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div> <!-- shaw panel -->
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading" data-toggle="collapse" data-parent="#accordion-north" href="#collapseOrtigas">
+                                                        <h6 class="panel-title"><span class="typcn typcn-media-stop"></span> Ortigas</h6>
+                                                    </div>
+                                                    <div id="collapseOrtigas" class="panel-collapse collapse">
+                                                        <div class="panel-body">
+                                                            <div class="row">
+                                                                <div class="col-md-12">
+                                                                    <button class="btn btn-block btn-warning"><strong>Stairs</strong> : 15 mins</button>
+                                                                </div>
+                                                                <div class="col-md-12">
+                                                                    <button class="btn btn-block btn-danger"><strong>Ticketing</strong> : 10 mins</button>
+                                                                </div>
+                                                                <div class="col-md-12">
+                                                                    <button class="btn btn-block btn-success"><strong>Platform</strong> : 5 mins</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div> <!-- ortigas panel -->
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading" data-toggle="collapse" data-parent="#accordion-north" href="#collapseSantolan">
+                                                        <h6 class="panel-title"><span class="typcn typcn-media-stop"></span> Santolan</h6>
+                                                    </div>
+                                                    <div id="collapseSantolan" class="panel-collapse collapse">
+                                                        <div class="panel-body">
+                                                            <div class="row">
+                                                                <div class="col-md-12">
+                                                                    <button class="btn btn-block btn-warning"><strong>Stairs</strong> : 15 mins</button>
+                                                                </div>
+                                                                <div class="col-md-12">
+                                                                    <button class="btn btn-block btn-danger"><strong>Ticketing</strong> : 10 mins</button>
+                                                                </div>
+                                                                <div class="col-md-12">
+                                                                    <button class="btn btn-block btn-success"><strong>Platform</strong> : 5 mins</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div> <!-- santolan panel -->
+                                            </div>
+                                        </div> <!-- row -->
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading" data-toggle="collapse" data-parent="#accordion-north" href="#collapseCubao">
+                                                        <h6 class="panel-title"><span class="typcn typcn-media-stop"></span> Cubao</h6>
+                                                    </div>
+                                                    <div id="collapseCubao" class="panel-collapse collapse">
+                                                        <div class="panel-body">
+                                                            <div class="row">
+                                                                <div class="col-md-12">
+                                                                    <button class="btn btn-block btn-warning"><strong>Stairs</strong> : 15 mins</button>
+                                                                </div>
+                                                                <div class="col-md-12">
+                                                                    <button class="btn btn-block btn-danger"><strong>Ticketing</strong> : 10 mins</button>
+                                                                </div>
+                                                                <div class="col-md-12">
+                                                                    <button class="btn btn-block btn-success"><strong>Platform</strong> : 5 mins</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div> <!-- cubao panel -->
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading" data-toggle="collapse" data-parent="#accordion-north" href="#collapseGMA">
+                                                        <h6 class="panel-title"><span class="typcn typcn-media-stop"></span> GMA-Kamuning</h6>
+                                                    </div>
+                                                    <div id="collapseGMA" class="panel-collapse collapse">
+                                                        <div class="panel-body">
+                                                            <div class="row">
+                                                                <div class="col-md-12">
+                                                                    <button class="btn btn-block btn-warning"><strong>Stairs</strong> : 15 mins</button>
+                                                                </div>
+                                                                <div class="col-md-12">
+                                                                    <button class="btn btn-block btn-danger"><strong>Ticketing</strong> : 10 mins</button>
+                                                                </div>
+                                                                <div class="col-md-12">
+                                                                    <button class="btn btn-block btn-success"><strong>Platform</strong> : 5 mins</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div> <!-- gma panel -->
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading" data-toggle="collapse" data-parent="#accordion-north" href="#collapseQAve">
+                                                        <h6 class="panel-title"><span class="typcn typcn-media-stop"></span> Quezon Avenue</h6>
+                                                    </div>
+                                                    <div id="collapseQAve" class="panel-collapse collapse">
+                                                        <div class="panel-body">
+                                                            <div class="row">
+                                                                <div class="col-md-12">
+                                                                    <button class="btn btn-block btn-warning"><strong>Stairs</strong> : 15 mins</button>
+                                                                </div>
+                                                                <div class="col-md-12">
+                                                                    <button class="btn btn-block btn-danger"><strong>Ticketing</strong> : 10 mins</button>
+                                                                </div>
+                                                                <div class="col-md-12">
+                                                                    <button class="btn btn-block btn-success"><strong>Platform</strong> : 5 mins</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div> <!-- quezon ave panel -->
+                                            </div>
+                                        </div> <!-- row -->
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading" data-toggle="collapse" data-parent="#accordion-north" href="#collapseNorth">
+                                                        <h6 class="panel-title"><span class="typcn typcn-media-stop"></span> North Avenue</h6>
+                                                    </div>
+                                                    <div id="collapseNorth" class="panel-collapse collapse">
+                                                        <div class="panel-body">
+                                                            <div class="row">
+                                                                <div class="col-md-12">
+                                                                    <button class="btn btn-block btn-warning"><strong>Stairs</strong> : 15 mins</button>
+                                                                </div>
+                                                                <div class="col-md-12">
+                                                                    <button class="btn btn-block btn-danger"><strong>Ticketing</strong> : 10 mins</button>
+                                                                </div>
+                                                                <div class="col-md-12">
+                                                                    <button class="btn btn-block btn-success"><strong>Platform</strong> : 5 mins</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div> <!-- north ave panel -->
+                                            </div>
+                                        </div> <!-- row -->
+                                    </div> <!-- / accordion-north -->
+                                </div> <!-- / northbound -->
+                                <div class="tab-pane fade" id="southbound">
+                                    <div class="panel-group" id="accordionS">
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading" data-toggle="collapse" data-parent="#accordionS" href="#collapseSNorthAve">
+                                                <h6 class="panel-title"><span class="typcn typcn-media-stop"></span> North Avenue</h6>
+                                            </div>
+                                            <div id="collapseSNorthAve" class="panel-collapse collapse">
+                                                <div class="panel-body">
+                                                    <div class="main-stairs">
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <p><strong><span class="typcn typcn-map"></span>Stairs:</strong> <span class="label label-danger">Heavy Traffic</span></p>
+                                                            </div>
+                                                            <div class="col-md-11 col-md-offset-1">
+                                                                <p><strong><span class="typcn typcn-watch"></span> Waiting time:</strong> <span class="label label-default">15 minutes</span></p>
+                                                            </div>
+                                                        </div>
+                                                    </div> <!-- /stairs -->
+                                                    <div class="row"><hr></div>
+                                                    <div class="main-ticketing">
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <p><strong><span class="typcn typcn-ticket"></span> Ticketing:</strong> <span class="label label-warning">Moderate Traffic</span></p>
+                                                            </div>
+                                                            <div class="col-md-11 col-md-offset-1">
+                                                                <p><strong><span class="typcn typcn-watch"></span> Waiting time:</strong> <span class="label label-default">10 minutes</span></p>
+                                                            </div>
+                                                        </div>
+                                                    </div> <!-- /tickets -->
+                                                    <div class="row"><hr></div>
+                                                    <div class="main-platform">
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <p><strong><span class="fa fa-road"></span> Platform:</strong> <span class="label label-success">Light Traffic</span></p>
+                                                            </div>
+                                                            <div class="col-md-11 col-md-offset-1">
+                                                                <p><strong><span class="typcn typcn-watch"></span> Waiting time:</strong> <span class="label label-default">5 minutes</span></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div> <!-- north ave panel -->
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading" data-toggle="collapse" data-parent="#accordionS" href="#collapseSQAve">
+                                                <h6 class="panel-title"><span class="typcn typcn-media-stop"></span> Quezon Avenue</h6>
+                                            </div>
+                                            <div id="collapseSQAve" class="panel-collapse collapse">
+                                                <div class="panel-body">
+                                                    <div class="main-stairs">
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <p><strong><span class="typcn typcn-map"></span>Stairs:</strong> <span class="label label-danger">Heavy Traffic</span></p>
+                                                            </div>
+                                                            <div class="col-md-11 col-md-offset-1">
+                                                                <p><strong><span class="typcn typcn-watch"></span> Waiting time:</strong> <span class="label label-default">15 minutes</span></p>
+                                                            </div>
+                                                        </div>
+                                                    </div> <!-- /stairs -->
+                                                    <div class="row"><hr></div>
+                                                    <div class="main-ticketing">
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <p><strong><span class="typcn typcn-ticket"></span> Ticketing:</strong> <span class="label label-warning">Moderate Traffic</span></p>
+                                                            </div>
+                                                            <div class="col-md-11 col-md-offset-1">
+                                                                <p><strong><span class="typcn typcn-watch"></span> Waiting time:</strong> <span class="label label-default">10 minutes</span></p>
+                                                            </div>
+                                                        </div>
+                                                    </div> <!-- /tickets -->
+                                                    <div class="row"><hr></div>
+                                                    <div class="main-platform">
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <p><strong><span class="fa fa-road"></span> Platform:</strong> <span class="label label-success">Light Traffic</span></p>
+                                                            </div>
+                                                            <div class="col-md-11 col-md-offset-1">
+                                                                <p><strong><span class="typcn typcn-watch"></span> Waiting time:</strong> <span class="label label-default">5 minutes</span></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div> <!-- quezon ave panel -->
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading" data-toggle="collapse" data-parent="#accordionS" href="#collapseSGMA">
+                                                <h6 class="panel-title"><span class="typcn typcn-media-stop"></span> GMA-Kamuning</h6>
+                                            </div>
+                                            <div id="collapseSGMA" class="panel-collapse collapse">
+                                                <div class="panel-body">
+                                                    <div class="main-stairs">
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <p><strong><span class="typcn typcn-map"></span>Stairs:</strong> <span class="label label-danger">Heavy Traffic</span></p>
+                                                            </div>
+                                                            <div class="col-md-11 col-md-offset-1">
+                                                                <p><strong><span class="typcn typcn-watch"></span> Waiting time:</strong> <span class="label label-default">15 minutes</span></p>
+                                                            </div>
+                                                        </div>
+                                                    </div> <!-- /stairs -->
+                                                    <div class="row"><hr></div>
+                                                    <div class="main-ticketing">
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <p><strong><span class="typcn typcn-ticket"></span> Ticketing:</strong> <span class="label label-warning">Moderate Traffic</span></p>
+                                                            </div>
+                                                            <div class="col-md-11 col-md-offset-1">
+                                                                <p><strong><span class="typcn typcn-watch"></span> Waiting time:</strong> <span class="label label-default">10 minutes</span></p>
+                                                            </div>
+                                                        </div>
+                                                    </div> <!-- /tickets -->
+                                                    <div class="row"><hr></div>
+                                                    <div class="main-platform">
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <p><strong><span class="fa fa-road"></span> Platform:</strong> <span class="label label-success">Light Traffic</span></p>
+                                                            </div>
+                                                            <div class="col-md-11 col-md-offset-1">
+                                                                <p><strong><span class="typcn typcn-watch"></span> Waiting time:</strong> <span class="label label-default">5 minutes</span></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div> <!-- GMA panel -->
+                                    </div> <!-- / accordion -->
+                                </div> <!-- / northbound -->
+                            </div>
+                            <!-- / tab-content -->
+                        </div>
+                        <!-- / tabbable -->
+                    </div>
+                    <!-- / main-content -->
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div id="sidebar">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h5 class="panel-title">REPORT</h5>
+                        </div>
+                        <div class="panel-body">
+                            <div class="tabbable" id="report-form">
+                                <ul id="report-tab" class="nav nav-tabs nav-append-content">
+                                    <li class="active"><a href="#step1" data-toggle="tab">Step 1</a>
+                                    </li>
+                                    <li class="disabled"><a href="#step2" data-toggle="">Step 2</a>
+                                    </li>
+                                    <li class="disabled"><a href="#step3" data-toggle="">Step 3</a>
+                                    </li>
+                                </ul>
+                                <!-- /tabs -->
+                                <div class="tab-content">
+                                    <div class="tab-pane fade in active" id="step1">
+                                        <p>
+                                            <strong>Going:</strong>
+                                        </p>
+                                        <div class="direction">
+                                            <div class="btn-group btn-group-justified" data-toggle="buttons">
+                                                <label class="btn btn-primary btn-lg">
+                                                    <input type="radio" name="bound" id="option1">
+                                                    <span class="typcn typcn-arrow-up-thick"></span> North <span class="label-direction">Bound</span>
+                                                </label>
+                                                <label class="btn btn-primary btn-lg">
+                                                    <input type="radio" name="bound" id="option2">
+                                                    <span class="typcn typcn-arrow-down-thick"></span> South <span class="label-direction">Bound</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <p>
+                                            <strong>Current Station:</strong>
+                                        </p>
+                                        <select name="stations" class="select-block mbl">
+                                            <optgroup label="Stations">
+                                                <option value="0">North Avenue</option>
+                                                <option value="1">Quezon Avenue</option>
+                                                <option value="2">GMA-Kamuning</option>
+                                                <option value="3">Cubao</option>
+                                                <option value="4">Santolan</option>
+                                                <option value="5">Ortigas</option>
+                                                <option value="6">Shaw Boulevard</option>
+                                                <option value="7">Boni Avenue</option>
+                                                <option value="8">Guadalupe</option>
+                                                <option value="9">Buendia</option>
+                                                <option value="10">Ayala</option>
+                                                <option value="11">Magallanes</option>
+                                                <option value="12">Taft Avenue</option>
+                                            </optgroup>
+                                        </select>
+                                        <hr>
+                                        <p>
+                                            <strong>Current Position:</strong>
+                                        </p>
+                                        <div class="btn-group btn-group-justified" data-toggle="buttons">
+                                            <label class="btn btn-primary">
+                                                <input type="radio" name="position" id="option1">
+                                                <span class="typcn typcn-map"></span>Stairs
+                                            </label>
+                                            <label class="btn btn-primary">
+                                                <input type="radio" name="position" id="option2">
+                                                <span class="typcn typcn-ticket"></span>Ticketing
+                                            </label>
+                                            <label class="btn btn-primary">
+                                                <input type="radio" name="position" id="option2">
+                                                <span class="fa fa-road"></span>Platform
+                                            </label>
+                                        </div>
+                                        <hr>
+                                        <div class="row">
+                                            <div class="col-xs-offset-6 col-xs-6">
+                                                <button type="button" onclick="return showNext()" class="btn btn-inverse btn-lg btn-block" id="btn-step1">Next
+                                                    <span class="typcn typcn-chevron-right"></span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="step2">
+                                        <p>
+                                            <strong>Current Condition:</strong>
+                                        </p>
+                                        <div class="btn-group btn-group-justified" data-toggle="buttons">
+                                            <label class="btn btn-primary btn-lg">
+                                                <input type="radio" name="condition" id="option1">Light
+                                            </label>
+                                            <label class="btn btn-warning btn-lg">
+                                                <input type="radio" name="condition" id="option2">Moderate
+                                            </label>
+                                            <label class="btn btn-danger btn-lg">
+                                                <input type="radio" name="condition" id="option2">Heavy
+                                            </label>
+                                        </div>
+                                        <hr>
+                                        <div class="form-group">
+                                            <h6>
+                                                <strong>How long have you been waiting?
+                                                    <span class="typcn typcn-stopwatch"></span>
+                                                </strong>
+                                            </h6>
+                                            <input type="text" class="form-control input-hg" placeholder="In minutes" />
+                                        </div>
+                                        <hr>
+                                        <div class="row">
+                                            <div class="col-xs-6">
+                                                <button type="button" onclick="return showPrev()" class="btn btn-inverse btn-lg btn-block">
+                                                    <span class="typcn typcn-chevron-left"></span>Prev</button>
+                                            </div>
+                                            <div class="col-xs-6">
+                                                <button type="button" onclick="return showNext()" class="btn btn-inverse btn-lg btn-block">Next
+                                                    <span class="typcn typcn-chevron-right"></span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="step3">
+                                        <form>
+                                            <h6>
+                                                <strong>Would you like to take a photo?
+                                                    <span class="label label-default">Optional</span>
+                                                </strong>
+                                            </h6>
+                                            <div class="form-group">
+                                                <div class="fileinput fileinput-new" data-provides="fileinput">
+                                                    <div class="fileinput-new thumbnail" style="width: 200px; height: 150px;">
+                                                    </div>
+                                                    <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 200px; max-height: 150px;"></div>
+                                                    <div>
+                                                        <span class="btn btn-primary btn-embossed btn-file">
+                                                            <span class="fileinput-new">
+                                                                <span class="fui-image"></span> Select image</span>
+                                                            <span class="fileinput-exists">
+                                                                <span class="fui-gear"></span>Change</span>
+                                                            <input type="file" name="...">
+                                                        </span>
+                                                        <a href="#" class="btn btn-primary btn-embossed fileinput-exists" data-dismiss="fileinput">
+                                                            <span class="fui-trash"></span>Remove</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-xs-6">
+                                                    <button type="button" onclick="return showPrev()" class="btn btn-inverse btn-lg btn-block">
+                                                        <span class="typcn typcn-chevron-left"></span>Prev</button>
+                                                </div>
+                                                <div class="col-xs-6">
+                                                    <button type="submit" class="btn btn-inverse btn-lg btn-block">Finish</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <!-- /tab-content -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Load JS here for greater good =============================-->
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="js/jquery.ui.touch-punch.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-select.js"></script>
+    <script src="js/bootstrap-switch.js"></script>
+    <script src="js/flatui-checkbox.js"></script>
+    <script src="js/flatui-fileinput.js"></script>
+    <script src="js/flatui-radio.js"></script>
+    <script src="js/jquery.tagsinput.js"></script>
+    <script src="js/jquery.placeholder.js"></script>
+    <script type="text/javascript" src="js/jquerypp.custom.js"></script>
+    <script type="text/javascript" src="js/jquery.elastislide.js"></script>
+    <script type="text/javascript">
+            
+            $( '#carousel1' ).elastislide();
+            $( '#carousel2' ).elastislide();
+            $( '#carousel3' ).elastislide();
+            $( '#carousel4' ).elastislide();
+            $( '#carousel5' ).elastislide();
+            $( '#carousel6' ).elastislide();
+
+            $( '#carouselS1' ).elastislide();
+            $( '#carouselS2' ).elastislide();
+            $( '#carouselS3' ).elastislide();
+            
+        </script>
+    <script src="js/main-custom.js"></script>
+</body>
+
+</html>

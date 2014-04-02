@@ -1,0 +1,198 @@
+﻿<!DOCTYPE html>
+@using WebMatrix.Data;
+@using WebMatrix.WebData;
+
+@{
+    //Layout = "~/_LandingPage.cshtml";
+    Page.Title = "Register";
+
+    // Initialize page variables
+    var email = "";
+    var password = "";
+    var confirmPassword = "";
+    var firstName = "";
+    var lastName = "";
+
+    // Setup validation
+    Validation.RequireField("firstName", "Please enter your first name.");
+    Validation.RequireField("lastName", "Please enter your last name.");
+    Validation.RequireField("email", "Please enter an email address.");
+    Validation.RequireField("password", "Please enter a password.");
+    Validation.Add("confirmPassword",
+        Validator.EqualsTo("password", "Passwords do not match."));
+    Validation.Add("password",
+        Validator.StringLength(
+            maxLength: Int32.MaxValue,
+            minLength: 6,
+            errorMessage: "Password must be at least 6 characters")); 
+     
+
+    // if button is pressed
+    if (IsPost)
+    {
+        //AntiForgery.Validate();
+        firstName = Request.Form["firstName"];
+        lastName = Request.Form["lastName"];
+        email = Request.Form["email"];
+        password = Request.Form["password"];
+        confirmPassword = Request.Form["confirmPassword"];
+
+        if(Validation.IsValid()){
+        // Insert a new user into the database
+         var db = Database.Open("SQLAzureConnection");
+
+            // Check if user email already exists
+             var user = db.QuerySingle("SELECT Email FROM tblUser WHERE LOWER(Email) = LOWER(@0)", email);
+            if (user == null)
+            {
+                // Insert email into the profile table
+                db.Execute("INSERT INTO tblUser (FirstName, LastName, Password, Email) VALUES (@0,@1,@2,@3)", firstName,lastName,password,email);
+                
+            }
+            else
+            {
+                // User already exists
+                ModelState.AddFormError("Email address is already in use.");
+            }
+        }
+        else
+        {
+            ModelState.AddFormError("There are some errors with your submission");
+        }
+    }
+    
+}
+
+
+
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>RailPhilippines - Crowd-Source MRT App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Oleo+Script+Swash+Caps:400,700' rel='stylesheet' type='text/css'>
+    <!-- Loading Bootstrap -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Loading Flat UI -->
+    <link href="css/flat-ui.css" rel="stylesheet">
+    <link href="css/onepage-scroll.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-embossed navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#" id="btn-rp">RailPhilippines</a>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topNavbar">
+                    <span class="sr-only">Toggle navigation</span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse" id="topNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Login <b class="caret"></b></a>
+                        <span class="dropdown-arrow"></span>
+                        <div class="dropdown-menu">
+                            <div class="login-container">
+                                <div class="login-form">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control login-field" value="" placeholder="Enter your Email" id="login-name" />
+                                        <label class="login-field-icon fui-user" for="login-name"></label>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control login-field" value="" placeholder="Password" id="login-pass" />
+                                        <label class="login-field-icon fui-lock" for="login-pass"></label>
+                                    </div>
+                                    <a class="btn btn-primary btn-lg btn-block" href="main.cshtml">Login</a>
+                                    <a class="login-link" href="#">Lost your password?</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="#" id="btn-register">Register</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="wrapper">
+        <div class="main">
+            <section class="page1">
+                <div class="page-container">
+                    <h1><img src="images/icons/png/Map.png" alt="Register" class="big-illustration"></h1>
+                    <!-- <span class="typcn typcn-arrow-shuffle"> -->
+                    <h1>Rail Philippines</h1>
+                    <div class="row">
+                        <div class="col-md-6 col-md-offset-3 col-xs-10 col-xs-offset-1">
+                            <small>a crowd-sourcing website for passengers to monitor and to be able to find out the most convenient time for them to take the transit system</small>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="page2"></section>
+            <section class="page3">
+                <div class="layer">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6 col-md-offset-3 col-xs-12">
+                                <div class="tile">
+                                    <h3>Sign Up</h3>
+                                    <form role="form" method="post">
+                                        <div class="form-group">
+                                            <label class="label">First Name</label>
+                                            <input type="text" class="form-control" placeholder="First Name" id="firstName" name="firstName" value="@firstName" />
+                                            @Html.ValidationMessage("firstName")
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="label">Last Name</label>
+                                            <input type="text" class="form-control" placeholder="Last Name" id="lastName" name="lastName" value="@lastName" />
+                                            @Html.ValidationMessage("lastName")
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="label">Email Address</label>
+                                            <input type="email" class="form-control" placeholder="yours@sth.com" id="email" name="email" value="@email" />
+                                            @Html.ValidationMessage("email")
+                                            @Html.ValidationSummary(true)
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="label">Password</label>
+                                            <input type="password" class="form-control" placeholder="Password" id="password" name="password" />
+                                            @Html.ValidationMessage("password")
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="label">Repeat Password</label>
+                                            <input type="password" class="form-control" placeholder="Repeat Password" id="confirmPassword" name="confirmPassword" />
+                                            @Html.ValidationMessage("confirmPassword")
+                                        </div>
+                                        <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <!-- Load JS here for greater good =============================-->
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="js/jquery.ui.touch-punch.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-select.js"></script>
+    <script src="js/bootstrap-switch.js"></script>
+    <script src="js/flatui-checkbox.js"></script>
+    <script src="js/flatui-radio.js"></script>
+    <script src="js/jquery.tagsinput.js"></script>
+    <script src="js/jquery.placeholder.js"></script>
+    <script src="js/jquery.onepage-scroll.min.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+</html>

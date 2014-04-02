@@ -1,0 +1,58 @@
+html {
+    height: 100%;
+}
+body {
+    padding-top: 70px;
+    position: relative;
+    margin: 0;
+    height: 100%;
+    background-color: #eaeaea;
+    -webkit-font-smoothing: antialiased;
+}
+h1, h2 {
+    width: 100%;
+    float: left;
+}
+.login-container {
+    width: 100%;
+    min-width: 280px;
+}
+.navbar-inverse .navbar-nav > .open > .dropdown-menu {
+    background: 0 0;
+}
+.login-form {
+    background: rgba(0, 0, 0, 0.5);
+}
+.navbar-brand {
+    font-family:'Oleo Script Swash Caps', cursive;
+}
+input {
+    margin-bottom: 1.2em;
+}
+ul {
+    padding-left: 0px;
+}
+.register-form {
+    margin-bottom: 40px;
+}
+.register-form > .row {
+    background-color: #edeff1;
+    padding-bottom: 30px;
+    border-radius: 5px;
+    border-bottom: 2px solid #d6dbdf;
+    border-right: 2px solid #d6dbdf;
+    border-left: 2px solid #d6dbdf;
+}
+.dialog {
+    background-color: #d6dbdf;
+    border-bottom: 2px solid #d6dbdf;
+}
+form {
+    border-radius: 5px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.1);
+}
+h3 {
+    -webkit-font-smoothing: antialiased;
+    font-family:'Lobster', cursive;
+}

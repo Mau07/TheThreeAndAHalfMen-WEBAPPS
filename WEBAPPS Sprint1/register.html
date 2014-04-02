@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>RailPhilippines - Register</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Oleo+Script+Swash+Caps:400,700' rel='stylesheet' type='text/css'>
+
+    <!-- Loading Bootstrap -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Loading Flat UI -->
+    <link href="css/flat-ui.css" rel="stylesheet">
+    <link href="css/prism.css" type="text/css" rel="stylesheet" />
+    <link href="css/super-label.css" type="text/css" rel="stylesheet" />
+    <link href="css/register-custom.css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="images/favicon.ico">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse navbar-embossed navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html" id="btn-rp">RailPhilippines</a>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topNavbar">
+                    <span class="sr-only">Toggle navigation</span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse" id="topNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Login <b class="caret"></b></a>
+                        <span class="dropdown-arrow"></span>
+                        <div class="dropdown-menu">
+                            <div class="login-container">
+                                <div class="login-form">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control login-field" value="" placeholder="Enter your Email" id="login-name" />
+                                        <label class="login-field-icon fui-user" for="login-name"></label>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control login-field" value="" placeholder="Password" id="login-pass" />
+                                        <label class="login-field-icon fui-lock" for="login-pass"></label>
+                                    </div>
+                                    <a class="btn btn-primary btn-lg btn-block" href="main.html">Login</a>
+                                    <a class="login-link" href="#">Lost your password?</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="register.html" id="btn-register">Register</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="register-form">
+            <div class="row">
+                <div class="dialog">
+                    <div class="container">
+                        <h3>Sign Up</h3>
+                    </div>
+                </div>
+                <div class="col-md-offset-4 col-md-4 col-sm-6 col-sm-offset-3">
+                    <form action="" method="POST">
+                        <ul>
+                            <li>
+                                <label for="fname">First Name</label>
+                                <input type="text" class="form-control" name="fname" value="" />
+                            </li>
+                            <li>
+                                <label for="lname">Last Name</label>
+                                <input type="text" class="form-control" name="lname" value="" />
+                            </li>
+                            <hr>
+                            <li>
+                                <label for="emailadd">Email Address</label>
+                                <input type="email" class="form-control" name="emailadd" value="" />
+                            </li>
+                            <li>
+                                <label for="pword1">Password</label>
+                                <input type="password" class="form-control" name="pword1" value="" />
+                            </li>
+                            <li>
+                                <label for="pword2">Confirm Password</label>
+                                <input type="password" class="form-control" name="pword2" value="" />
+                            </li>
+                            <div class="row">
+                                <div class="col-sm-6 col-sm-offset-6">
+                                    <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                                </div>
+                            </div>
+                        </ul>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Load JS here for greater good =============================-->
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="js/jquery.ui.touch-punch.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-select.js"></script>
+    <script src="js/bootstrap-switch.js"></script>
+    <script src="js/flatui-checkbox.js"></script>
+    <script src="js/flatui-radio.js"></script>
+    <script src="js/jquery.tagsinput.js"></script>
+    <script src="js/jquery.placeholder.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/prism.js"></script>
+    <script src="js/jquery.superLabels.min.js"></script>
+    <script src="js/register-custom.js"></script>
+</body>
+
+</html>
